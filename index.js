@@ -1,7 +1,5 @@
 const express = require("express");
 
-const { DISCORDMONKCHANNEL } = require("dotenv").config;
-
 const { discordURL } = require("./hidden");
 
 const app = express();
