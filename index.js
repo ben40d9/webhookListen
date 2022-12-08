@@ -22,7 +22,7 @@ app.post("/updatedProduct", (req, res) => {
         title: `${req.body.title}`,
         url: "https://google.com/",
         description:
-          "Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://google.com) `code`",
+          "This will be the description. You should get sent to the shop w/ this hyperLink. [__copnshop.com__](https://copnshop.com/)",
         color: 15258703,
         fields: [
           {
@@ -36,8 +36,9 @@ app.post("/updatedProduct", (req, res) => {
             inline: true,
           },
           {
-            name: 'Use `"inline": true` parameter, if you want to display fields in the same line.',
-            value: "okay...",
+            name: "Weight",
+            value: `${req.body.variants[1].weight}g`,
+            inline: true,
           },
           {
             name: "Thanks Ben!",
